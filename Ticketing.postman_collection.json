@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "657af67a-d86f-464b-95bf-d95f291833e3",
+		"name": "Ticketing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23864389"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ticketing.dev/api/users/currentuser",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"users",
+								"currentuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/users/signin",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/users/signup",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/users/signout",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"users",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "User Authentication"
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Get all tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ticketing.dev/api/tickets",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Tickets with id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/tickets/65a5608c5cf2cb86339f967b",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"65a5608c5cf2cb86339f967b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Ticket",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"concert ticket\",\n    \"price\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/tickets",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a ticket with id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"updated ticket\",\n    \"price\": 25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/tickets/65bc450c5f15733cfd716a24",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"65bc450c5f15733cfd716a24"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Ticket routes"
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create New Payment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\" : \"65c3794a9c1812701e8fb672\",\n    \"token\" : \"sdfsf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/payments",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Payment routes."
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create New Order",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticketId\": \"65c2cc8448caf3fb3207903a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/orders/",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticketId\": \"65c2cc8448caf3fb3207903a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/orders/65c2ccaa15dd40ccff869075",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"orders",
+								"65c2ccaa15dd40ccff869075"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get existing order",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/orders/65c2ccaa15dd40ccff869075",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"orders",
+								"65c2ccaa15dd40ccff869075"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all orders",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ticketing.dev/api/orders/",
+							"protocol": "https",
+							"host": [
+								"ticketing",
+								"dev"
+							],
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Order routes."
+		}
+	]
+}
